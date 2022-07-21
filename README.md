@@ -1,5 +1,7 @@
 # vue-ts-play
 
+### Playing around with Vue.js and TypeScript
+
 ## Project setup
 ```
 npm install
