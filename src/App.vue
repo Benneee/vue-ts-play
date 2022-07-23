@@ -1,54 +1,55 @@
 <template>
   <div class="app">
-    <p> {{ name }} - {{ age }}</p>
-    <button @click="changeName('Akin')">
-      Change name
-    </button>
-    <button @click="changeAge('32')">
-      Change name
-    </button>
+    <p> {{ jobs[0].location }} </p>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import Job from "./types/Job";
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {},
 
   setup() {
-    // const state = reactive({
-    //   name: 'Link',
-    //   age: 25 as string | number
-    // })
-
-    // const name = ref('Link');
-    // const age = ref<number | string>(25) // This uses generic to infer the type
+    const jobs = ref<Job[]>([
+      {
+        title: 'mason',
+        location: 'london ranch',
+        salary: 30000,
+        id: '1'
+      },
+      {
+        title: 'quarryman',
+        location: 'death mountain',
+        salary: 40000,
+        id: '2'
+      },
+      {
+        title: 'musician',
+        location: 'the woods',
+        salary: 35000,
+        id: '3'
+      },
+      {
+        title: 'fisherman',
+        location: 'lake hylia',
+        salary: 21000,
+        id: '4'
+      },
+      {
+        title: 'prison guard',
+        location: 'gerudo valley',
+        salary: 32000,
+        id: '5'
+      }
+    ])
 
     return {
-      // ...toRefs(state)
-      // name,
-      // age
+      jobs
     }
   },
-
-  // data() {
-  //   return {
-  //     name: 'Link',
-  //     age: 25 as number | string // This way we can provide two types for the age variable within the data block
-  //   }
-  // },
-
-  // methods: {
-  //   changeName(name: string) {
-  //     this.name = name;
-  //   },
-
-  //   changeAge(age: number | string) {
-  //     this.age = age;
-  //   }
-  // },
 });
 </script>
 
