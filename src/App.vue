@@ -17,22 +17,38 @@ export default defineComponent({
   name: 'App',
   components: {},
 
-  data() {
+  setup() {
+    // const state = reactive({
+    //   name: 'Link',
+    //   age: 25 as string | number
+    // })
+
+    // const name = ref('Link');
+    // const age = ref<number | string>(25) // This uses generic to infer the type
+
     return {
-      name: 'Link',
-      age: 25 as number | string // This way we can provide two types for the age variable within the data block
+      // ...toRefs(state)
+      // name,
+      // age
     }
   },
 
-  methods: {
-    changeName(name: string) {
-      this.name = name;
-    },
+  // data() {
+  //   return {
+  //     name: 'Link',
+  //     age: 25 as number | string // This way we can provide two types for the age variable within the data block
+  //   }
+  // },
 
-    changeAge(age: number | string) {
-      this.age = age;
-    }
-  }
+  // methods: {
+  //   changeName(name: string) {
+  //     this.name = name;
+  //   },
+
+  //   changeAge(age: number | string) {
+  //     this.age = age;
+  //   }
+  // },
 });
 </script>
 
