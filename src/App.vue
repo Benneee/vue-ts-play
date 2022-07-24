@@ -1,6 +1,10 @@
 <template>
   <div class="app">
     <header>
+      <div class="title">
+        <img src="./assets/heart.svg" alt="JobsStats">
+        <h1>Jobs Stats</h1>
+      </div>
       <div class="order">
         <button @click="handleSorting('title')">Order by title</button>
         <button @click="handleSorting('salary')">Order by salary</button>
@@ -90,6 +94,20 @@ export default defineComponent({
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+  }
+
+  header .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  header img {
+    width: 60px;
+    margin-right: 20px;
+  }
+
+  header h1 {
+    font-size: 3em;
   }
 
 </style>
