@@ -2,6 +2,8 @@
 
 ### Playing around with Vue.js and TypeScript
 
+### [Credit: NetNinja's series on YouTube](https://www.youtube.com/watch?v=JfI5PISLr9w)
+
 ## Project setup
 ```
 npm install
